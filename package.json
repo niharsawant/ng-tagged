@@ -5,7 +5,7 @@
   },
   "name"                  : "ng-tagged",
   "version"               : "0.0.1",
-  "description"           : "Tags input directive for AngularJS",
+  "description"           : "AngularJS Module for Tag Editor",
   "license"               : "MIT",
   "dependencies"          : {},
   "devDependencies"       : {
