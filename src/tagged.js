@@ -7,12 +7,14 @@
   module.directive('tagged', function () {
     return {
       restrict : 'E',
+      require : 'ngModel',
       replace : true,
       templateUrl : '/ng-tagged/templates/tagged.html',
-      transclude : true,
-      link : function (scope, element, attrs) {
-        console.log(scope);
-      }
+      transclude : false,
+      scope : {
+        tags : '=ngModel'
+      },
+      link : function (scope, element, attrs) {}
     };
   });
 
