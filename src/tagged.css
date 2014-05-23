@@ -1,0 +1,11 @@
+.tagged-list {
+  margin: 0;
+  padding: 0;
+}
+
+.tagged-item {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
