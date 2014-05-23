@@ -1,0 +1,15 @@
+{
+  "author"                : {
+    "name"                : "Nihar Sawant",
+    "email"               : "nihar@expojure.com"
+  },
+  "name"                  : "ng-tagged",
+  "version"               : "0.0.1",
+  "description"           : "Tags input directive for AngularJS",
+  "license"               : "MIT",
+  "dependencies"          : {},
+  "devDependencies"       : {
+    "grunt"               : "*",
+    "grunt-contrib-watch" : "*"
+  }
+}
