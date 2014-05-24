@@ -1,6 +1,13 @@
+.tagged {
+  font-size: 1em;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border: 1px solid #000;
+}
+
 .tagged-list {
   margin: 0;
-  padding: 0;
+  padding: 0.5em;
+  display: inline-block;
 }
 
 .tagged-item {
@@ -8,4 +15,30 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.tagged-input {
+  margin: 0;
+  padding: 0;
+
+  font-size: 1em;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  border: none;
+  background: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.tagged-input:hover, .tagged-input:focus {
+  border: none;
+  background: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.tagged-input:focus {
+  outline: none;
 }
