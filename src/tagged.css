@@ -6,15 +6,27 @@
 
 .tagged-list {
   margin: 0;
-  padding: 0.5em;
+  padding: 0.5em 0.25em 0.5em 0.5em;
   display: inline-block;
 }
 
 .tagged-item {
   display: inline-block;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 0.25em;
+  padding: 0.25em;
+}
+.tagged-item:first-child {
+  margin-left: 0;
+}
+.tagged-item:last-child {
+  margin-right: 0;
+}
+.tagged-item-theme {
+  color: #DDD;
+  border-radius: 3px;
+  background: #464646;
+  border: 1px solid #000;
 }
 
 .tagged-input {
