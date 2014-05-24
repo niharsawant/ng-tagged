@@ -12,7 +12,8 @@
       templateUrl : '/ng-tagged/templates/tagged.html',
       transclude : false,
       scope : {
-        tags : '=ngModel'
+        tags : '=ngModel',
+        onblur : '&'
       },
       link : function (scope, element, attrs) {
 
