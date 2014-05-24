@@ -2,5 +2,6 @@
   <ul class="tagged-list">
     <li class="tagged-item" ng-repeat="tag in tags">{{tag}}</li>
   </ul>
-  <input class="tagged-input" type="text" placeholder="Add a tag">
+  <input class="tagged-input" type="text" placeholder="Add a tag"
+    ng-keyup="listenToKey($event)" ng-model="tagText">
 </div>
