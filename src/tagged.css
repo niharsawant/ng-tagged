@@ -39,18 +39,23 @@
   border: none;
   background: none;
 
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+
+  outline: 0;
   box-shadow: none;
 }
 .tagged-input:hover, .tagged-input:focus {
   border: none;
   background: none;
 
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+
+  outline: 0;
   box-shadow: none;
-}
-.tagged-input:focus {
-  outline: none;
 }
