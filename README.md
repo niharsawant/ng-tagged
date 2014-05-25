@@ -1,4 +1,4 @@
 ng-tagged
 =========
 
-Angular Module for Tags Editor
+Lightweight Angular Module for Tags Editor
