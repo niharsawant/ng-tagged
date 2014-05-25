@@ -2,31 +2,31 @@
   font-size: 1em;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border: 1px solid #000;
+
+  padding: 0.25em;
 }
 
 .tagged-list {
   margin: 0;
-  padding: 0.5em 0.25em 0.5em 0.5em;
-  display: inline-block;
+  padding: 0;
+  display: inline;
 }
 
 .tagged-item {
   display: inline-block;
   list-style: none;
-  margin: 0 0.25em;
+  margin: 0.25em;
   padding: 0.25em;
 }
-.tagged-item:first-child {
-  margin-left: 0;
-}
-.tagged-item:last-child {
-  margin-right: 0;
-}
+
 .tagged-item-theme {
   color: #DDD;
   border-radius: 3px;
   background: #464646;
   border: 1px solid #000;
+}
+.tagged-item-theme:last-child {
+  margin-right: 0;
 }
 
 .tagged-remove {
@@ -37,8 +37,9 @@
 }
 
 .tagged-input {
-  margin: 0;
+  margin: 0.25em;
   padding: 0;
+  width: 4.5em;
 
   font-size: 1em;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
