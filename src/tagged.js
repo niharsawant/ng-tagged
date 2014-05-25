@@ -18,6 +18,17 @@
         onremove : '&'
       },
       link : function (scope, element, attrs) {
+        // Private method which will dynamically increase the width of the
+        // textbox
+        var extendInputWidth = function (element) {
+          var fontSize = element.clientHeight/2;
+          var textWidth = fontSize * element.value.length;
+
+          // If width is larger than default width then increase it
+          if (textWidth > element.clientWidth) {
+            element.style.width = textWidth + fontSize;
+          }
+        };
 
         // Actual funtion taking care of adding tags and related functionality
         scope.addTag = function () {
@@ -48,6 +59,8 @@
             scope.addTag();
             return false;
           }
+
+          extendInputWidth(ev.srcElement);
         };
 
       }
