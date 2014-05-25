@@ -34,10 +34,14 @@
           element.style.width = '';
         };
 
-        // Actual funtion taking care of adding tags and related functionality
+        // Actual function taking care of adding tags and related functionality
         scope.addTag = function () {
-          var response;
+          if (!scope.tagText) { return; } // Check for undefined
+          scope.tagText = scope.tagText.trim();
+          if (!scope.tagText) { return; } // Check for all empty spaces
           scope.tagText = scope.tagText.replace(',','').trim();
+          if (!scope.tagText) { return } // Check for only comma
+
           scope.tags.push(scope.tagText);
 
           response = {
