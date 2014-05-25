@@ -34,6 +34,7 @@
           scope.tagText = '';
         };
 
+        // Actual function taking care of removing a tag from the array
         scope.removeTag = function (tag, index) {
           var response = { $tag : tag, $index : index };
           scope.tags.splice(index, 1);
