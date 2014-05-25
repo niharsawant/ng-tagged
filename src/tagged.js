@@ -34,6 +34,12 @@
           scope.tagText = '';
         };
 
+        scope.removeTag = function (tag, index) {
+          var response = { $tag : tag, $index : index };
+          scope.tags.splice(index, 1);
+          scope.onremove(response);
+        };
+
         // Listen to every keyup event from tag editor and decide when to
         // create a tag. As of now create a new tag when comma is pressed
         scope.listenToKey = function (ev) {
