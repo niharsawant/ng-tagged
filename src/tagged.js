@@ -30,6 +30,10 @@
           }
         };
 
+        var resetInputWidth = function (element) {
+          element.style.width = '';
+        };
+
         // Actual funtion taking care of adding tags and related functionality
         scope.addTag = function () {
           var response;
@@ -57,9 +61,11 @@
         scope.listenToKey = function (ev) {
           if (ev.which === 188 || ev.keyCode === 188) {
             scope.addTag();
+            resetInputWidth(ev.srcElement);
             return false;
           }
 
+          // Dynamically extend width of inputs
           extendInputWidth(ev.srcElement);
         };
 
