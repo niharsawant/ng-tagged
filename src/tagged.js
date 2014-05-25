@@ -44,7 +44,7 @@
 
           scope.tags.push(scope.tagText);
 
-          response = {
+          var response = {
             $tag : scope.tagText,
             $index : scope.tags.length
           };
@@ -71,6 +71,14 @@
 
           // Dynamically extend width of inputs
           extendInputWidth(ev.srcElement);
+        };
+
+        // Listen to every blur event of textbox and create a tag immedieatly
+        // after that invoke the callback
+        scope.listenToBlur = function (ev) {
+          var response = { $event : ev };
+          scope.addTag();
+          scope.onblur(response);
         };
 
       }
