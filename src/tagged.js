@@ -40,7 +40,7 @@
           scope.tagText = scope.tagText.trim();
           if (!scope.tagText) { return; } // Check for all empty spaces
           scope.tagText = scope.tagText.replace(',','').trim();
-          if (!scope.tagText) { return } // Check for only comma
+          if (!scope.tagText) { return; } // Check for only comma
 
           scope.tags.push(scope.tagText);
 
