@@ -19,8 +19,14 @@
         onremove : '&'
       },
       controller : function ($scope, $attrs, $element) {
+        // Set default value for placeholder attribute
         $attrs.$observe('placeholder', function (value) {
           $scope.placeholder = value || 'Add a tag';
+        });
+
+        // Focus on input when clicked on any empty region of tag editor
+        $element.on('click', function (ev) {
+          if (this == ev.target) { $element.find('input')[0].focus(); }
         });
       },
       link : function (scope, element, attrs) {
