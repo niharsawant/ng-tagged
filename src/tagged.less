@@ -24,9 +24,10 @@
   border-radius: 3px;
   background: #464646;
   border: 1px solid #000;
-}
-.tagged-item-theme:last-child {
-  margin-right: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .tagged-remove {
@@ -55,18 +56,20 @@
   appearance: none;
 
   box-shadow: none;
-}
-.tagged-input:hover, .tagged-input:focus {
-  border: none;
-  background: none;
 
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
+  &:hover, &:focus {
+    border: none;
+    background: none;
 
-  box-shadow: none;
-}
-.tagged-input:focus {
-  outline: none
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+
+    box-shadow: none;
+  }
+
+  &:focus {
+    outline : none;
+  }
 }
