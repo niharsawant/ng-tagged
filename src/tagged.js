@@ -37,7 +37,7 @@
         };
 
         var resetInputWidth = function (element) {
-          element.style.width = '';
+          element.style.width = scope.inputWidth;
         };
 
         // Actual function taking care of adding tags and related functionality
@@ -86,6 +86,13 @@
           scope.addTag();
           scope.onblur(response);
         };
+
+        // Listen to placeholder value and dynamically calculate the width of
+        // the inputbox
+        scope.$watch('placeholder', function (value) {
+          var inputTag = element.find('input')[0];
+          scope.inputWidth = value.length * (inputTag.clientHeight/3);
+        });
 
       }
     };

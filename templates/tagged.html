@@ -6,6 +6,6 @@
     </li>
   </ul>
   <input class="tagged-input" type="text" placeholder="{{placeholder}}"
-    ng-keyup="listenToKey($event)" ng-model="tagText"
-    ng-blur="listenToBlur($event)">
+    ng-model="tagText" ng-style="{width:inputWidth}"
+    ng-keyup="listenToKey($event)" ng-blur="listenToBlur($event)">
 </div>
