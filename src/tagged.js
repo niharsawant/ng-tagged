@@ -100,7 +100,12 @@
         // the inputbox
         scope.$watch('placeholder', function (value) {
           var inputTag = element.find('input')[0];
-          scope.inputWidth = value.length * (inputTag.clientHeight/3);
+          var pseudo = angular.element('<span></span>').text(value)
+            .css({ visibility : 'hidden', width: 'auto' });
+
+          element.append(pseudo);
+          scope.inputWidth = pseudo.prop('offsetWidth') + 10;
+          pseudo.remove();
         });
 
       }
