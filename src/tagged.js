@@ -54,6 +54,9 @@
           scope.tagText = scope.tagText.replace(',','').trim();
           if (!scope.tagText) { return; } // Check for only comma
 
+          // Check for duplicate items
+          if (scope.tags.indexOf(scope.tagText) != -1) { return; }
+
           scope.tags.push(scope.tagText);
 
           var response = {
