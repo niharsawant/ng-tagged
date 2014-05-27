@@ -5,7 +5,7 @@
       <span class="tagged-remove" ng-click="removeTag(tag, $index)">×</span>
     </li>
   </ul>
-  <input class="tagged-input" type="text" placeholder="Add a tag"
+  <input class="tagged-input" type="text" placeholder="{{placeholder}}"
     ng-keyup="listenToKey($event)" ng-model="tagText"
     ng-blur="listenToBlur($event)">
 </div>

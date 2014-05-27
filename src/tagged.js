@@ -12,10 +12,16 @@
       templateUrl : '/ng-tagged/templates/tagged.html',
       transclude : false,
       scope : {
+        placeholder : '@',
         tags : '=ngModel',
         onadd : '&',
         onblur : '&',
         onremove : '&'
+      },
+      controller : function ($scope, $attrs, $element) {
+        $attrs.$observe('placeholder', function (value) {
+          $scope.placeholder = value || 'Add a tag';
+        });
       },
       link : function (scope, element, attrs) {
         // Private method which will dynamically increase the width of the
