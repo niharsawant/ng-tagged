@@ -23,6 +23,14 @@
         $attrs.$observe('placeholder', function (value) {
           $scope.placeholder = value || 'Add a tag';
         });
+        $attrs.$observe('addOnComma', function (value) {
+          value = value ? (value === 'true') : true;
+          $scope.addOnComma = value;
+        });
+        $attrs.$observe('addOnEnter', function (value) {
+          value = value ? (value === 'true') : true;
+          $scope.addOnEnter = value;
+        });
 
         // Focus on input when clicked on any empty region of tag editor
         $element.on('click', function (ev) {
@@ -78,7 +86,10 @@
         // Listen to every keyup event from tag editor and decide when to
         // create a tag. As of now create a new tag when comma is pressed
         scope.listenToKey = function (ev) {
-          if (ev.which === 188 || ev.keyCode === 188) {
+          var isComma = (ev.which === 188 || ev.keyCode === 188);
+          var isEnter = (ev.which === 13 || ev.keyCode === 13);
+
+          if ((scope.addOnComma && isComma) || (scope.addOnEnter && isEnter)) {
             scope.addTag();
             resetInputWidth(ev.srcElement);
             return false;
